@@ -1,0 +1,35 @@
+[commit]
+	gpgsign = true
+
+[color]
+	ui = true
+
+[core]
+	editor = nano
+	autocrlf = input
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = true
+
+[fetch]
+	prune = true
+
+[push]
+	default = current
+	fallowTags = true
+
+[alias]
+	l = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	c = !git add --all && git commit -m
+	s = status -s
+	amend = !git add --all && git commit --amend --no-edit
+	up = !"git pull --rebase --progress --verbose --prune --tags --all --recurse-submodules"
+
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
