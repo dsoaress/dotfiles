@@ -39,6 +39,7 @@ cask_apps=(
   pictogram
   vlc
   utm
+  airbuddy
   font-jetbrains-mono-nerd-font
 )
 
