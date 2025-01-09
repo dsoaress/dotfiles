@@ -38,6 +38,7 @@ cask_apps=(
   figma
   pictogram
   vlc
+  utm
   font-jetbrains-mono-nerd-font
 )
 
