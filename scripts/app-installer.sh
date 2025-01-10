@@ -11,6 +11,7 @@ essential_tools=(
   gh
   glab
   starship
+  dockutil
   atomicjar/tap/testcontainers-desktop
 )
 

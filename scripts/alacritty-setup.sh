@@ -5,6 +5,10 @@ echo "Configuring Alacritty..."
 CONFIG_DIR="$HOME/.config/alacritty"
 mkdir -p "$CONFIG_DIR"
 
-cp "$(dirname "$0")/../config/alacritty.yml" "$CONFIG_DIR/alacritty.yml"
+CONFIG_FILE="alacritty.toml"
+TARGET_FILE="$CONFIG_DIR/$CONFIG_FILE"
+SOURCE_FILE="$(dirname "$0")/../config/$CONFIG_FILE"
 
-echo "Alacritty configuration copied to $CONFIG_DIR."
+cp "$SOURCE_FILE" "$TARGET_FILE"
+
+echo "Alacritty configuration set at $CONFIG_DIR."
